@@ -6,7 +6,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HideableText text='Dynamic Text' />
+    <HideableText />
   </React.StrictMode>,
   document.getElementById('root')
 );

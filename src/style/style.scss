@@ -14,9 +14,28 @@ $secondaryColor: grey;
   border-radius: 15px; 
   background:  $mainColor;
   margin: auto;
-  box-shadow:  0 5px 10px #868686;
+  box-shadow:  0 5px 10px #868686, 11px 0px 1px rgba(199, 199, 199, 0.246);
 
 }
+
+.title {
+  font-family: Geneva, Verdana, sans-serif;
+  color: White;
+  margin-bottom: 10px;
+  margin-top:-4px;
+  font-size: 40px;
+
+}
+
+.searchIcon {
+  position: absolute;
+  margin-left:-390px;
+  margin-top: 20px;
+  font-size: 25px;
+  color: red;
+
+}
+
 
 .searchField {
   width: 95%;
@@ -26,18 +45,34 @@ $secondaryColor: grey;
   border:none;
   border-radius:20px;
   outline: none;
+  text-align: center;
   padding: 0 10px;
   box-shadow: -5px 5px 1px rgb(230, 230, 230);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  
+}
 
+.counter {
+  font-size: 30px;
+  font-family: monospace;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  margin-left: 60px;
+  background: red;
+  padding-left: 7px;
+  text-align: left;
+  width: 40px;
+  height: auto;
+  clip-path: circle(100% at 33% -10% );
 }
 
 .item {
   font-family: sans-serif;
   background: white;
+  font-size: 20px;
   padding: 10px;
-  box-shadow: -5px 0 1px #c5c4c4;
-  border-bottom: 5px solid #c5c4c4;
+  box-shadow: -5px 0 1px #c5c4c49f;
+  border-bottom: 5px solid #c5c4c494;
   transition: .1s linear;
   list-style: none;
   border-radius: 10px;
@@ -47,6 +82,11 @@ $secondaryColor: grey;
      transform: scale(1.1,1);
       margin-bottom: 4px;
 
+  }
+
+  .userIcon {
+    padding-right: 20px;
+    font-size: 25px;
   }
 
 }

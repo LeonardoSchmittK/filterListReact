@@ -16,44 +16,60 @@ export default class AutoCompleteText extends React.Component {
 
   onTextChanged = (e) => {
       const value = e.target.value
+      
       let suggestions = []
       if(value.length > 0) { 
         const regex = new RegExp(`^${value}`,'i')
         suggestions = this.items.sort().filter(v=>regex.test(v))
-      }
+         localStorage.setItem('v',JSON.stringify(suggestions))
+      } 
+
       this.setState(()=>({
-        suggestions
+        suggestions : JSON.parse(localStorage.getItem('v'))
+
       }))
-      
+  
+     
   }
 
+
   renderSuggestions() {
-    const {suggestions} = this.state;
-    if(suggestions.length === 0) {
+    const {suggestions} =   this.state   ;
+    if (suggestions.length === 0) {
       return null
     }
     return (
-        <>
-          {
-            suggestions.map((item)=>  <li className='item'>{item}</li>)           
-          }
+        <>       
+         {
+          JSON.parse(localStorage.getItem('v')).map((item)=>  
+          <li className='item' key={item+1} >
+            <i className="userIcon far fa-user"></i>
+            {item}
+          </li>)  
+         }                                     
         </>
     )
   }
 
   render(){
-    return(
-      <div className='interface'>
+    return (
+      <div className='interface'>       
+          <h1 className='title'>Search a name
+        <span className='counter'>
+          {this.state.suggestions.length > 0 ? this.state.suggestions.length : null}
+        </span>
+        </h1>       
         <input 
         type='text'
         className='searchField'
+        maxLength='13'
         onChange={this.onTextChanged}
         />
-         <>
+      <i className="searchIcon fas fa-search"></i>
+         
           {
           this.renderSuggestions()       
-          }
-        </>
+          }     
       </div>
     )
   }

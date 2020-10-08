@@ -41,6 +41,16 @@
   "Charlotte",
   "Landon",
   "Isla",
+  "Lara",
+  "Carah",
+  "Camar",
+  "Obum",
+  "Olo",
+  "Oslo",
+  "Heigroma",
+  "Sarah",
+  "Deidara",
+  "Weingartner"
 ]
 
 let names = function(){
