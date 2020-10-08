@@ -1,0 +1,48 @@
+::-moz-selection {
+  background-color: #f1f150;
+}
+
+::selection {
+  background-color: #f1f150;
+}
+
+.interface {
+  max-width: 400px;
+  height: auto;
+  padding: 20px 40px;
+  border-radius: 15px;
+  background: #f1f150;
+  margin: auto;
+  -webkit-box-shadow: inset 0 5px 10px #7f882b;
+          box-shadow: inset 0 5px 10px #7f882b;
+}
+
+.searchField {
+  width: 95%;
+  height: 64px;
+  font-size: 2.5em;
+  font-family: monospace ,sans-serif;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 0 10px;
+  -webkit-box-shadow: -5px 5px 1px #e6e6e6;
+          box-shadow: -5px 5px 1px #e6e6e6;
+}
+
+.item {
+  font-family: sans-serif;
+  background: white;
+  padding: 10px;
+  -webkit-box-shadow: -5px 0 1px #c5c4c4;
+          box-shadow: -5px 0 1px #c5c4c4;
+  border-bottom: 5px solid #c5c4c4;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.item:hover {
+  -webkit-transform: scale(1.03, 1);
+          transform: scale(1.03, 1);
+}
+/*# sourceMappingURL=style.css.map */
