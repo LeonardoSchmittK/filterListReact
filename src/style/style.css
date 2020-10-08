@@ -7,7 +7,7 @@
 }
 
 body {
-  background: radial-gradient(#e6e6e6 70%, #c2c2c2 90%) fixed;
+  background: radial-gradient(#e6e6e6 70%, #eeeeee90) fixed;
 }
 
 .interface {
@@ -27,6 +27,8 @@ body {
   margin-bottom: 10px;
   margin-top: -4px;
   font-size: clamp(1.8rem, 2vw, 2.5rem);
+  letter-spacing: 2px;
+  text-shadow: 0 3px 1px #9c2f2f;
 }
 
 .searchIcon {
@@ -34,7 +36,6 @@ body {
   margin-left: -390px;
   margin-top: 20px;
   font-size: 25px;
-  color: red;
 }
 
 .searchField {
@@ -57,7 +58,7 @@ body {
   font-family: monospace;
   color: white;
   position: relative;
-  background: #c51414;
+  background: #ca0b0b;
   position: absolute;
   padding: 0 7px;
   margin-left: 2%;

@@ -1,13 +1,15 @@
 $mainColor:  #e70d0d;
 $secondaryColor: grey;
 
+
 ::selection {
   background-color: $mainColor;
 
 }
 
 body {
-  background: radial-gradient( rgb(230, 230, 230) 70%,rgb(194, 194, 194)90%)  fixed;
+  background: radial-gradient( #e6e6e6 70%,#eeeeee90)  fixed;
+  
 }
 
 .interface {
@@ -27,8 +29,8 @@ body {
   margin-bottom: 10px;
   margin-top:-4px;
   font-size: clamp(1.8rem, 2vw, 2.5rem);
-  // font-size: 40px;
-
+  letter-spacing: 2px;
+  text-shadow: 0 3px 1px rgb(156, 47, 47);
 }
 
 .searchIcon {
@@ -36,7 +38,6 @@ body {
   margin-left:-390px;
   margin-top: 20px;
   font-size: 25px;
-  color: red;
 
 }
 
@@ -61,7 +62,7 @@ body {
   font-family: monospace;
   color: rgb(255, 255, 255);
   position: relative;
-  background: rgb(197, 20, 20);
+  background: darken($mainColor,6%);
   position: absolute;
   padding: 0 7px;
   margin-left:2%;
@@ -90,6 +91,7 @@ body {
   .userIcon {
     padding-right: 20px;
     font-size: 25px;
+
   }
 
 }

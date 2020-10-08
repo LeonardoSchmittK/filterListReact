@@ -12,6 +12,7 @@ export default class AutoCompleteText extends React.Component {
 
     this.onTextChanged = this.onTextChanged.bind(this);
     this.renderSuggestions = this.renderSuggestions.bind(this);
+    this.getFocus = this.getFocus.bind(this)
   }
 
   onTextChanged = (e) => {
@@ -32,7 +33,8 @@ export default class AutoCompleteText extends React.Component {
   renderSuggestions() {
     const { suggestions } = this.state;
     if (suggestions.length === 0) {
-      return null;
+      return 
+      
     }
     return (
       <>
@@ -44,12 +46,19 @@ export default class AutoCompleteText extends React.Component {
         ))}
       </>
     );
+
   }
+
+    getFocus(){
+      window.document.querySelector('.searchField').focus()    
+    }
+
+    
 
   render() {
     let items = this.state.suggestions;
     return (
-      <div className="interface">
+      <div className="interface" >
         <h1 className="title">
           Search a name
           <span className="counter">
@@ -63,10 +72,12 @@ export default class AutoCompleteText extends React.Component {
           className="searchField"
           maxLength="13"
           onChange={this.onTextChanged}
+          onMouseMove={this.getFocus}
         />
         <i className="searchIcon fas fa-search"></i>
+        
+         {this.renderSuggestions() } 
 
-        {this.renderSuggestions()}
       </div>
     );
   }
