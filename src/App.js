@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./style/style.css";
 import names from "./names";
 
-export default class AutoCompleteText extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.items = names();
     this.state = {
       suggestions: [],
+      key:0,
     };
 
     this.onTextChanged = this.onTextChanged.bind(this);
@@ -17,11 +18,11 @@ export default class AutoCompleteText extends React.Component {
 
   onTextChanged = (e) => {
     const value = e.target.value;
-
     let suggestions = [];
+
     if (value.length > 0) {
-      const regex = new RegExp(`^${value}`, "i");
-      suggestions = this.items.sort().filter((v) => regex.test(v));
+       const regex = new RegExp(`^${value}`, "i");
+      suggestions = this.items.sort().filter((v) => v.match(regex));
       localStorage.setItem("v", JSON.stringify(suggestions));
     }
 
@@ -31,15 +32,15 @@ export default class AutoCompleteText extends React.Component {
   };
 
   renderSuggestions() {
+    
     const { suggestions } = this.state;
     if (suggestions.length === 0) {
-      return 
-      
+      return  null  
     }
     return (
       <>
         {JSON.parse(localStorage.getItem("v")).map((item) => (
-          <li className="item" key={item + 1}>
+          <li className="item" key={this.state.key + 1}>
             <i className="userIcon far fa-user"></i>
             {item}
           </li>
@@ -52,8 +53,6 @@ export default class AutoCompleteText extends React.Component {
     getFocus(){
       window.document.querySelector('.searchField').focus()    
     }
-
-    
 
   render() {
     let items = this.state.suggestions;
