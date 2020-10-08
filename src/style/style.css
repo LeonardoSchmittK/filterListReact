@@ -26,7 +26,7 @@ body {
   color: White;
   margin-bottom: 10px;
   margin-top: -4px;
-  font-size: 40px;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
 }
 
 .searchIcon {
@@ -53,18 +53,15 @@ body {
 }
 
 .counter {
-  font-size: 30px;
+  font-size: 35px;
   font-family: monospace;
   color: white;
+  position: relative;
+  background: #c51414;
   position: absolute;
-  margin-left: 60px;
-  background: red;
-  padding-left: 7px;
-  text-align: left;
-  width: 40px;
-  height: auto;
-  -webkit-clip-path: circle(100% at 33% -10%);
-          clip-path: circle(100% at 33% -10%);
+  padding: 0 7px;
+  margin-left: 2%;
+  border-radius: 50%;
 }
 
 .item {
