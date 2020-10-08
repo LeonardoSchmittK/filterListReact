@@ -6,6 +6,10 @@
   background-color: #e70d0d;
 }
 
+body {
+  background: radial-gradient(#e6e6e6 70%, #c2c2c2 90%) fixed;
+}
+
 .interface {
   max-width: 400px;
   height: auto;

@@ -6,6 +6,9 @@ $secondaryColor: grey;
 
 }
 
+body {
+  background: radial-gradient( rgb(230, 230, 230) 70%,rgb(194, 194, 194)90%)  fixed;
+}
 
 .interface {
   max-width: 400px;
