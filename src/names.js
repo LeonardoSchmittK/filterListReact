@@ -1,0 +1,51 @@
+ const people = [
+  "David",
+  "Damien",
+  "Sara",
+  "Jane",
+  "Robert",
+  "Rafael",
+  "Lucas",
+  "Edward",
+  "Albert",
+  "Silveiras",
+  "Zelda",
+  "Alisson",
+  "Monica",
+  "Phoebe",
+  "Leon",
+  "Claire",
+  "Janine",
+  "Chris",
+  "Brown",
+  "Browser",
+  "Peozeiro",
+  "Leonardo",
+  "Linda",
+  "Lazaro",
+  "Jennifer",
+  "Peter",
+  "John",
+  "Maria",
+  "Marcos",
+  "Jonatan",
+  "Henrique",
+  "Luiza",
+  "Levi",
+  "Aurora",
+  "Aiden",
+  "Amelia",
+  "Benjamin",
+  "Ava",
+  "Jasper",
+  "Charlotte",
+  "Landon",
+  "Isla",
+]
+
+let names = function(){
+ return people
+};
+
+export default names;
+

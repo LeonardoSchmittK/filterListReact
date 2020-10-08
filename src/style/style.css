@@ -1,9 +1,9 @@
 ::-moz-selection {
-  background-color: #f1f150;
+  background-color: #e70d0d;
 }
 
 ::selection {
-  background-color: #f1f150;
+  background-color: #e70d0d;
 }
 
 .interface {
@@ -11,10 +11,10 @@
   height: auto;
   padding: 20px 40px;
   border-radius: 15px;
-  background: #f1f150;
+  background: #e70d0d;
   margin: auto;
-  -webkit-box-shadow: inset 0 5px 10px #7f882b;
-          box-shadow: inset 0 5px 10px #7f882b;
+  -webkit-box-shadow: 0 5px 10px #868686;
+          box-shadow: 0 5px 10px #868686;
 }
 
 .searchField {
@@ -23,11 +23,12 @@
   font-size: 2.5em;
   font-family: monospace ,sans-serif;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   outline: none;
   padding: 0 10px;
   -webkit-box-shadow: -5px 5px 1px #e6e6e6;
           box-shadow: -5px 5px 1px #e6e6e6;
+  margin-bottom: 20px;
 }
 
 .item {
@@ -39,10 +40,14 @@
   border-bottom: 5px solid #c5c4c4;
   -webkit-transition: .1s linear;
   transition: .1s linear;
+  list-style: none;
+  border-radius: 10px;
+  position: relative;
 }
 
 .item:hover {
-  -webkit-transform: scale(1.03, 1);
-          transform: scale(1.03, 1);
+  -webkit-transform: scale(1.1, 1);
+          transform: scale(1.1, 1);
+  margin-bottom: 4px;
 }
 /*# sourceMappingURL=style.css.map */
