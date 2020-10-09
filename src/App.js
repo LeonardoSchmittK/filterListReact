@@ -70,14 +70,16 @@ export default class App extends React.Component {
           type="text"
           className="searchField"
           maxLength="13"
+          defaultValue="people name"
           onChange={this.onTextChanged}
           onMouseMove={this.getFocus}
         />
         <i className="searchIcon fas fa-search"></i>
         
-         {this.renderSuggestions() } 
-
+         {this.renderSuggestions() }  
+              
       </div>
     );
   }
 }
+
